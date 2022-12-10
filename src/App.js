@@ -10,6 +10,8 @@ import LoginPage from "./pages/Login";
 import UserProfilePage from "./pages/UserProfile";
 import Header from "./components/Header";
 import { initializeApp } from "firebase/app";
+import Dashboard from "./pages/Dashboard";
+import LandingPage from "./pages/LandingPage";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBqUaYuht4nTP_ovV3dElhqWOprm4CTYU8",
@@ -52,7 +54,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: (
-    <UserProfilePage 
+    <LandingPage 
     isLoggedIn= {isLoggedIn}
     isLoading = {isLoading}
     userInformation= {userInformation}
@@ -81,6 +83,30 @@ const router = createBrowserRouter([
     />
     )
   },
+  {
+    path: "/user",
+    element: (
+    <UserProfilePage 
+    isLoggedIn= {isLoggedIn}
+    isLoading = {isLoading}
+    userInformation= {userInformation}
+    setIsLoggedIn={setIsLoggedIn}
+    setUserInformation={setUserInformation}
+    />
+    ),
+  },
+  {
+    path: "/dashboard",
+    element: (
+    <Dashboard 
+    isLoggedIn= {isLoggedIn}
+    isLoading = {isLoading}
+    userInformation= {userInformation}
+    setIsLoggedIn={setIsLoggedIn}
+    setUserInformation={setUserInformation}
+    />
+    ),
+  }
 ]);
 
   return (
