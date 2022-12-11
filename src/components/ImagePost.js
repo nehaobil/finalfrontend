@@ -1,10 +1,12 @@
 import React from "react";
 
-function ImagePost({imageData}){
+function ImagePost({caption, imageAlt, imageSrc}){
     return(
-        <div>
-            <img src={imageData.src} alt={imageData.alt}/>
-            <p>Caption</p>
+        <div className="ImagePost">
+            <img src={imageSrc} alt={imageAlt}/>
+            <div className="ImagePostText">
+                <p className="Caption">{caption}</p>
+            </div>
         </div>
     )
 }

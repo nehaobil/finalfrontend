@@ -12,6 +12,7 @@ import Header from "./components/Header";
 import { initializeApp } from "firebase/app";
 import Dashboard from "./pages/Dashboard";
 import LandingPage from "./pages/LandingPage";
+import CreatePost from "./pages/CreatePost";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBqUaYuht4nTP_ovV3dElhqWOprm4CTYU8",
@@ -99,6 +100,18 @@ const router = createBrowserRouter([
     path: "/dashboard",
     element: (
     <Dashboard 
+    isLoggedIn= {isLoggedIn}
+    isLoading = {isLoading}
+    userInformation= {userInformation}
+    setIsLoggedIn={setIsLoggedIn}
+    setUserInformation={setUserInformation}
+    />
+    ),
+  },
+  {
+    path: "/post",
+    element: (
+    <CreatePost 
     isLoggedIn= {isLoggedIn}
     isLoading = {isLoading}
     userInformation= {userInformation}

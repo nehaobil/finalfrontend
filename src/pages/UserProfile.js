@@ -12,7 +12,7 @@ function UserProfilePage({isLoading, isLoggedIn, userInformation, setIsLoggedIn,
     return(
     <>
     <Header isLoggedIn= {isLoggedIn} setIsLoggedIn={setIsLoggedIn} setUserInformation={setUserInformation}/>
-    <div>
+    <div className="PageWrapper">
         <h1>User Profile</h1>
         <p>
             <strong>Email: </strong>

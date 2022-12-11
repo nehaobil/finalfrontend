@@ -1,5 +1,5 @@
 header {
-  padding: 40px 25px;
+  padding: 35px 35px;
   display: flex;
 }
 
@@ -13,7 +13,7 @@ nav {
 }
 
 nav p {
-  color: black;
+  color: #EB3C35;
   cursor: pointer;
   font-size: 16px;
   font-weight: bold;
@@ -48,4 +48,31 @@ nav p {
   font-size: 16px;
   margin-top: 20px;
   padding: 10px;
+}
+
+.LandingPageImage {
+  width: 100px;
+}
+
+.ImagePostWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.ImagePost {
+  border: 1px solid black;
+  margin-bottom: 40px;
+  max-width: 350px;
+  min-height: 350px;
+  width: 100%;
+}
+
+.ImagePost img {
+  height: auto;
+  width: 100%;
+}
+
+.ImagePostText {
+  padding: 25px;
 }
