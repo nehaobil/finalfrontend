@@ -17,6 +17,9 @@ function UserProfilePage({isLoading, isLoggedIn, userInformation, setIsLoggedIn,
         <p>
             <strong>Email: </strong>
             {userInformation.email}</p>
+        <p>
+            <strong>Name: </strong>
+            {userInformation.displayName}</p>
     </div>
     </>
     );
