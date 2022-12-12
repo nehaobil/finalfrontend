@@ -35,7 +35,7 @@ nav p {
 
 .FormElement input {
   font-size: 16px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   padding: 10px;
 }
 
@@ -75,4 +75,11 @@ nav p {
 
 .ImagePostText {
   padding: 25px;
+}
+
+.ImagePostText p {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+  margin-bottom: 12px;
 }
