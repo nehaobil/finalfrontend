@@ -29,11 +29,9 @@ function Header({isLoggedIn, setUserInformation, setIsLoggedIn}) {
                 <p>Create Account</p>
             </Link>
         )}
-        {isLoggedIn &&(
+          {isLoggedIn &&(
             <button className="PostButton">
-                <Link to="/post">
-                    <p>Post New Outfit</p>
-                </Link>
+                <Link to="/post">Post New Outfit</Link>
             </button>
         )}
         {isLoggedIn &&(
@@ -51,6 +49,7 @@ function Header({isLoggedIn, setUserInformation, setIsLoggedIn}) {
              <Link to="/">Log out</Link>
              </p>
         )}
+      
         </nav>
         </header>
     )

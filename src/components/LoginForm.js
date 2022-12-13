@@ -7,7 +7,7 @@ function LoginForm({loginUser}){
         <input type="text" name="email"/>
         <label for="password">Password</label>
         <input type="password" name="password"/>
-        <button type="submit">Submit</button>
+        <button type="submit" className="Button">Submit</button>
     </form>
     );
 }

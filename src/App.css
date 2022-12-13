@@ -1,14 +1,19 @@
-header {
-  padding: 30px 35px;
+.Header {
+  padding: 25px;
   display: flex;
+}
+
+.Header p {
+  flex-shrink: 0;
 }
 
 nav {
   display: flex;
+  align-items: center;
   justify-content: flex-end;
   max-width: 1080px;
   margin: 0 auto;
-  padding-top: 5px;
+  padding-top: 10px;
   width: 100%;
 }
 
@@ -18,8 +23,10 @@ nav a {
   font-size: 20px;
   font-weight: bold;
   font-family: "Futura";
-  margin: 0 0 0 30px;
-  text-decoration: underline;
+  margin: 0 20px 0 30px;
+  text-decoration: none;
+  
+  display: inline-block;
 }
 
 nav a:hover {
@@ -61,7 +68,7 @@ nav a:hover {
   margin-bottom: 8px;
 }
 
-.FormElement button {
+.Button {
   font-size: 16px;
   margin-top: 20px;
   padding: 10px;
@@ -74,6 +81,26 @@ nav a:hover {
   border-radius: 8px;
   font-family: "Futura";
   font-weight: bold;
+} 
+
+.PostButton{
+  font-size: 16px;
+  padding: 10px;
+  background-color: #EB3C35;
+  margin-right: 20px; 
+  border: none;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  border-radius: 8px;
+  font-family: "Futura";
+  font-weight: bold;
+}
+
+.PostButton a{
+  color: white;
+  text-align: center;
+  display: inline-block;
 }
 
 .PageWrapper p {
@@ -106,26 +133,9 @@ nav a:hover {
 }
 
 .LandingPageImage img{
+  padding-top: 65px;
   width: 100%;
   height: auto;
-}
-
-.PostButton {
-  font-size: 16px;
-  background-color: #EB3C35; 
-  border: none;
-  text-decoration: none;
-  display: inline-block;
-  border-radius: 8px;
-  font-family: "Futura";
-  font-weight: bold;
-  height: 60px;
-}
-
-.PostButton p{
-  text-align: center;
-  color: white;
-  text-decoration: none;
 }
 
 .ImagePostWrapper {
