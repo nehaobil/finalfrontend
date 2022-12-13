@@ -58,11 +58,16 @@ function CreateUserPage({setIsLoggedIn , setUserInformation, isLoggedIn}){
         <>
         <Header isLoggedIn= {isLoggedIn} setIsLoggedIn={setIsLoggedIn} setUserInformation={setUserInformation}/>
         <div className="PageWrapper">
+        <div className="PageWrapper--Text">
             <h1>Create Account</h1>
             <CreateUserForm signUpUser={signUpUser}/>
             <p>{errors}</p>
             <p>Already have an account?</p>
             <p><Link to="/login">Login</Link></p>
+        </div>
+        <div className="PageWrapper-Graphic">
+            <img src="https://live.staticflickr.com/65535/52560229431_88434fbeaf_b.jpg"/>
+        </div>
         </div>
         </>
     );

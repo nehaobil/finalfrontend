@@ -1,5 +1,5 @@
 header {
-  padding: 35px 35px;
+  padding: 30px 35px;
   display: flex;
 }
 
@@ -8,23 +8,36 @@ nav {
   justify-content: flex-end;
   max-width: 1080px;
   margin: 0 auto;
-  padding-top: 10px;
+  padding-top: 5px;
   width: 100%;
 }
 
-nav p {
+nav a {
   color: #EB3C35;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
-  margin: 0 0 0 40px;
+  font-family: "Futura";
+  margin: 0 0 0 30px;
   text-decoration: underline;
 }
+
+nav a:hover {
+  color: black;
+}
+
 
 .PageWrapper {
   margin: 0 auto;
   padding: 20px;
   max-width: 1080px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.PageWrapper h1 {
+  font-family: "Futura";
+  font-size: 38px;
 }
 
 .FormElement {
@@ -40,6 +53,7 @@ nav p {
 }
 
 .FormElement label {
+  font-family: "Futura";
   font-weight: bold;
   margin-bottom: 8px;
 }
@@ -48,10 +62,61 @@ nav p {
   font-size: 16px;
   margin-top: 20px;
   padding: 10px;
+  background-color: #EB3C35; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  border-radius: 8px;
+  font-family: "Futura";
+  font-weight: bold;
 }
 
-.LandingPageImage {
-  width: 100px;
+.PageWrapper p {
+  font-family: "Futura";
+  font-weight: 600;
+}
+
+.PageWrapper a {
+  font-family: "Futura";
+  font-weight: 600;
+  color: black;
+}
+
+.PageWrapper a:hover {
+  color: #EB3C35;
+}
+
+.PageWrapper--Text {
+  flex-basis: 70%;
+}
+
+.PageWrapper--Graphic {
+  flex-basis: 30%;
+  
+}
+
+.PageWrapper--Graphic img{
+  max-width: 300px;
+  height: auto;
+}
+
+.LandingPageImage img{
+  width: 100%;
+  height: auto;
+}
+
+.Button {
+  font-size: 16px;
+  background-color: white; 
+  border-color: black;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.Button p{
+  color: white;
 }
 
 .ImagePostWrapper {
