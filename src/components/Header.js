@@ -30,18 +30,20 @@ function Header({isLoggedIn, setUserInformation, setIsLoggedIn}) {
             </Link>
         )}
         {isLoggedIn &&(
-            <button className="Button">
-                <Link to="/post">Post New Outfit</Link>
+            <button className="PostButton">
+                <Link to="/post">
+                    <p>Post New Outfit</p>
+                </Link>
             </button>
         )}
         {isLoggedIn &&(
              <p>
-             <Link to="/user">My Profile</Link>
+             <Link to="/dashboard">Home</Link>
             </p>
         )}
-        {isLoggedIn &&(
+         {isLoggedIn &&(
              <p>
-             <Link to="/dashboard">Dashboard</Link>
+             <Link to="/user">My Profile</Link>
             </p>
         )}
         {isLoggedIn &&(

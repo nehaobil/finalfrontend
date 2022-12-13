@@ -31,8 +31,11 @@ nav a:hover {
   margin: 0 auto;
   padding: 20px;
   max-width: 1080px;
+}
+
+.PageWrapper--Sign {
   display: flex;
-  justify-content: flex-start;
+  flex-direction: row;
 }
 
 .PageWrapper h1 {
@@ -43,7 +46,7 @@ nav a:hover {
 .FormElement {
   display: flex;
   flex-direction: column;
-  max-width: 500px;
+  max-width: 400px;
 }
 
 .FormElement input {
@@ -89,16 +92,16 @@ nav a:hover {
 }
 
 .PageWrapper--Text {
-  flex-basis: 70%;
+  flex-basis: 60%;
 }
 
-.PageWrapper--Graphic {
-  flex-basis: 30%;
-  
+.PageWrapper-Graphic {
+  flex-basis: 40%;
+  padding-top: 50px;
 }
 
-.PageWrapper--Graphic img{
-  max-width: 300px;
+.PageWrapper-Graphic img{
+  width: 500px;
   height: auto;
 }
 
@@ -107,16 +110,22 @@ nav a:hover {
   height: auto;
 }
 
-.Button {
+.PostButton {
   font-size: 16px;
-  background-color: white; 
-  border-color: black;
-  text-align: center;
+  background-color: #EB3C35; 
+  border: none;
+  text-decoration: none;
+  display: inline-block;
   border-radius: 8px;
+  font-family: "Futura";
+  font-weight: bold;
+  height: 60px;
 }
 
-.Button p{
+.PostButton p{
+  text-align: center;
   color: white;
+  text-decoration: none;
 }
 
 .ImagePostWrapper {

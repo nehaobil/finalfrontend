@@ -41,6 +41,7 @@ function LoginPage({isLoggedIn, setIsLoggedIn, setUserInformation}){
     <>
     <Header isLoggedIn= {isLoggedIn} setIsLoggedIn={setIsLoggedIn} setUserInformation={setUserInformation}/>
     <div className="PageWrapper">
+        <div className="PageWrapper--Sign">
         <div className="PageWrapper--Text">
         <h1>Log In</h1>
             <LoginForm loginUser = {loginUser}/>
@@ -50,6 +51,7 @@ function LoginPage({isLoggedIn, setIsLoggedIn, setUserInformation}){
         </div>
         <div className="PageWrapper-Graphic">
             <img src="https://live.staticflickr.com/65535/52560229431_88434fbeaf_b.jpg"/>
+        </div>
         </div>
     </div>
     </>

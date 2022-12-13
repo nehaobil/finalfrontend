@@ -27,11 +27,12 @@ function Dashboard({app, isLoading, isLoggedIn, userInformation, setIsLoggedIn, 
     <>
     <Header isLoggedIn= {isLoggedIn} setIsLoggedIn={setIsLoggedIn} setUserInformation={setUserInformation}/>
     <div className="PageWrapper">
-        <h1>Dashboard</h1>
+        <h1>All Posts</h1>
         <div className="ImagePostWrapper">
             <ImagePost
                 caption="cool post"
                 imageAlt="cool guy post"
+                userName="cool guy"
             />
             <ImagePost/>
             <ImagePost/>

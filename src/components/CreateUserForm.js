@@ -8,7 +8,7 @@ function CreateUserForm({signUpUser}){
         <label for="email">Email</label>
         <input type="text" name="email"/>
         <label for="password">Password</label>
-        <input type="text" name="password"/>
+        <input type="password" name="password"/>
         <button type="submit">Submit</button>
     </form>
     );
