@@ -2,12 +2,22 @@ import React, { useEffect,useState } from 'react';
 import { getStorage, ref, getDownloadURL } from "firebase/storage";
 
 function ImagePost({caption, imageAlt, imageSrc, userName}){
-   
+        const [image, setImage] = useState();
+
+        useEffect(() => {
+            const storage = getStorage();
+            getDownloadURL(ref(storage, 'images/' + imageSrc))
+            .then((url) => {
+                setImage(url);
+            });
+            
+        },[imageSrc]);
+        
         return (
             <div className="ImagePost">
                 <img 
                 className="PostImage"
-                src={imageSrc} 
+                src={image} 
                 alt={imageAlt}
                 />
                 <div className='ImagePostText'>
@@ -16,6 +26,7 @@ function ImagePost({caption, imageAlt, imageSrc, userName}){
                 </div>
             </div>
         )
+        
     } 
 
 

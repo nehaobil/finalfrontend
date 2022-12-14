@@ -1,4 +1,4 @@
-import React, {useEffect, useState, useMemo} from "react";
+import React, {useEffect, useState} from "react";
 import { useNavigate } from "react-router";
 import {getFirestore, collection, getDocs} from "firebase/firestore";
 import Header from "../components/Header";

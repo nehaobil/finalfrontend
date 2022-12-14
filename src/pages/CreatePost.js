@@ -14,18 +14,26 @@ function CreatePost({app, isLoading, isLoggedIn, userInformation, setIsLoggedIn,
             e.preventDefault();
             const db = getFirestore(app);
             const storage = getStorage();
+            const imageToUpload = e.currentTarget.imageToUpload.files[0];
+            const imageRef = ref(storage, 'images/' + imageToUpload.name);
             const caption = e.currentTarget.caption.value;
             const imageAlt = e.currentTarget.imageAlt.value;
             const userName = userInformation.displayName;
             try {
-                
+                await uploadBytes(imageRef, imageToUpload).then(
+                    (snapshot) => {
+                        console.log("Uploaded a blob or file!", snapshot);
+                        return snapshot;
+                    }
+                );
 
                 const docRef = await addDoc(collection(db, "posts"), {
                     caption, 
                     imageAlt, 
-                    imageSrc: "",
+                    imageSrc: imageToUpload.name,
                     userName
                 });
+                console.log("Document written with ID: ", docRef.id);
                 setPostSuccessful(true);
             } catch (e) {
                 console.error("Error adding document, ", e);
@@ -35,6 +43,7 @@ function CreatePost({app, isLoading, isLoggedIn, userInformation, setIsLoggedIn,
     useEffect(() => {
         if(!isLoggedIn && !isLoading) return navigate('/login');
     }, [isLoading, isLoggedIn, navigate]);
+    
     useEffect(() => {
         if(postSuccessful) return navigate('/dashboard'); 
     }, [postSuccessful, navigate]);

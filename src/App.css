@@ -145,10 +145,7 @@ nav a:hover {
 }
 
 .ImagePost {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  border: 3px solid #EB3C35;
+  border: 3px solid black;
   margin-bottom: 40px;
   max-width: 350px;
   min-height: 350px;
