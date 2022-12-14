@@ -113,6 +113,7 @@ const router = createBrowserRouter([
     path: "/post",
     element: (
     <CreatePost 
+    app= {appInitialized}
     isLoggedIn= {isLoggedIn}
     isLoading = {isLoading}
     userInformation= {userInformation}
