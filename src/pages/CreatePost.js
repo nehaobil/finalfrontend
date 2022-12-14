@@ -14,23 +14,16 @@ function CreatePost({app, isLoading, isLoggedIn, userInformation, setIsLoggedIn,
             e.preventDefault();
             const db = getFirestore(app);
             const storage = getStorage();
-            const imageToUpload = e.currentTarget.imageToUpload.files[0];
-            const imageRef = ref(storage, 'images/' + imageToUpload.name);
             const caption = e.currentTarget.caption.value;
             const imageAlt = e.currentTarget.imageAlt.value;
             const userName = userInformation.displayName;
             try {
-                await uploadBytes(imageRef, imageToUpload).then(
-                    (snapshot) => {
-                        console.log("Uploaded a blob or file!", snapshot);
-                        return snapshot;
-                    }
-                );
+                
 
                 const docRef = await addDoc(collection(db, "posts"), {
                     caption, 
                     imageAlt, 
-                    imageSrc: imageToUpload.name,
+                    imageSrc: "",
                     userName
                 });
                 setPostSuccessful(true);

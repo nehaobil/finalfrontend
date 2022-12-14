@@ -3,7 +3,6 @@ import { useNavigate } from "react-router";
 import {getFirestore, collection, getDocs} from "firebase/firestore";
 import Header from "../components/Header";
 import ImagePost from "../components/ImagePost";
-import { async } from "@firebase/util";
 
 const queryData = async (app) => {
     if (!app) return [];
