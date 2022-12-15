@@ -88,6 +88,7 @@ const router = createBrowserRouter([
     path: "/user",
     element: (
     <UserProfilePage 
+    app = {appInitialized}
     isLoggedIn= {isLoggedIn}
     isLoading = {isLoading}
     userInformation= {userInformation}

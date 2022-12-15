@@ -53,10 +53,16 @@ function CreatePost({app, isLoading, isLoggedIn, userInformation, setIsLoggedIn,
     <>
     <Header isLoggedIn= {isLoggedIn} setIsLoggedIn={setIsLoggedIn} setUserInformation={setUserInformation}/>
     <div className="PageWrapper">
-        <h1>Post a New Outfit!</h1>
-        <CreatePostForm 
-                createPost={createPost}/>
-                <p>{postSuccessful && "Success!"}</p>
+    <div className="PageWrapper--Sign">
+        <div className="PageWrapper--Text">
+            <h1>Post a New Outfit!</h1>
+            <CreatePostForm 
+            createPost={createPost}/>
+        </div>
+        <div className="PageWrapper-Graphic2">
+            <img src="https://live.staticflickr.com/65535/52564302939_b35b1c62dd_b.jpg"/>
+        </div>
+    </div>
     </div>
     </>
     );

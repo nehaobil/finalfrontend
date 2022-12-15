@@ -20,10 +20,3 @@ function CreatePostForm({createPost}){
 
 export default CreatePostForm;
 
-/*<label htmlFor="imageToUpload">Outfit</label>
-            <input
-                type="file"
-                name="imageToUpload"
-                accept="image/png, image/jpeg, image/jpg, image/gif"
-            />
-            */

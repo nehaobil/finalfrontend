@@ -11,7 +11,7 @@ function CreateUserPage({setIsLoggedIn , setUserInformation, isLoggedIn}){
     const navigate = useNavigate();
 
     useEffect(() => {
-        if (isLoggedIn) navigate('/');
+        if (isLoggedIn) navigate('/dashboard');
     }, [isLoggedIn]);
 
     const signUpUser = useCallback(

@@ -33,6 +33,7 @@ function Dashboard({app, isLoading, isLoggedIn, userInformation, setIsLoggedIn, 
     <Header isLoggedIn= {isLoggedIn} setIsLoggedIn={setIsLoggedIn} setUserInformation={setUserInformation}/>
     <div className="PageWrapper">
         <h1>All Posts</h1>
+        <div className="ImagePosts">
         {postData.map((post,index) => (
             <div className="ImagePostWrapper" key = {index}>
                 <ImagePost
@@ -43,6 +44,7 @@ function Dashboard({app, isLoading, isLoggedIn, userInformation, setIsLoggedIn, 
                 />
             </div>
         ))}
+        </div>
         
     </div>
     </>
